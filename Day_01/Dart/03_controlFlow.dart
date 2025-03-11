@@ -1,4 +1,10 @@
+// ignore_for_file: unused_local_variable
+
 void main(){
+
+var year = 1977;
+var flybyObjects = ['Jupiter', 'Saturn', 'Uranus', 'Neptune'];
+
    if (year >= 2001) {
   print('21st century');
 } else if (year >= 1901) {
