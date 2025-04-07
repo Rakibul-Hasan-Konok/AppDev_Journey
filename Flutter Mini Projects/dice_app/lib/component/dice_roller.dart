@@ -16,25 +16,25 @@ class _DiceRollerState extends State<DiceRoller> {
     });
   }
   @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Image.asset(
-        'assets//images/dice-six-faces-$currentDice.png',
-        width: 200,  
-    ),
-    const SizedBox(height:30),
-    TextButton(
-     style: TextButton.styleFrom(
-      textStyle: const TextStyle(
-        fontSize:28,
+Widget build(BuildContext context) {
+  return Column(
+    mainAxisSize: MainAxisSize.min,
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      Image.asset(
+        'assets/images/dice-$currentDice.png', // fixed path
+        width: 200,
       ),
-      foregroundColor: Colors.white,
-     ),
-     onPressed: rollDice,
-     child: const Text('Roll Dice'),
+      const SizedBox(height: 30),
+      TextButton(
+        style: TextButton.styleFrom(
+          textStyle: const TextStyle(fontSize: 28),
+          foregroundColor: Colors.white,
+        ),
+        onPressed: rollDice,
+        child: const Text('Roll Dice'),
       )
-      ],
-     );
-  }
+    ],
+  );
+}
 }
